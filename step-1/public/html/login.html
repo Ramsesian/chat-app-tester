@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <main class="wrapper">
+        <div class="image-wrapper">
+            <img src="/images/placeholder.jpg">
+        </div>
+        <div class="header">
+            <h1>Login to your account</h1>
+        </div>
+        <div class="form-wrapper">
+            <form action="/login" method="POST" id="login">
+                <fieldset class="input contains-legend">
+                    <legend>Email</legend>            
+                    <input type="email" name="email" placeholder="name@example.com" required>
+                </fieldset>
+                <fieldset class="input">
+                    <input type="password" name="password" placeholder="Password" required>
+                </fieldset>
+                <!-- FOR SOME REASON whatever's wrapping this is created around the button and nested inside -->
+                <label for="remember" class="checkbox">
+                    <!-- TODO change10 the checkboxes color to green -->
+                    <input type="checkbox" name="remember" value="true" checked>
+                    Remember me
+                </label>
+
+                <button type="submit" class="submit">Login</button>
+            </form>
+            <p class="link">Don't have an account? <a href="/html/register.html">Register here</a></p>
+        </div>
+    </main>
+</body>
+</html>

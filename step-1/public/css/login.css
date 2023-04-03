@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+:root {
+    --input-height: 60px;
+    --input-offset: 1.5ch;
+    --unfocused: #DDDDDF;
+    --accent: #57DCAD;
+    --colored-dark: #5d6069;
+    --border: 25px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.wrapper {
+    height: 100vh;
+    overflow-y: hidden;
+    background: #f6f8f6;
+    display: grid;
+    font-family: 'Noto Sans Lao', sans-serif;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "image"
+        "form";
+        /* "form"; */
+}
+
+.image-wrapper {
+    grid-area: image;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+}
+
+.header {
+    grid-area: form;
+    background: #f6f8f6;
+    height: 3em;
+    border-top-right-radius: var(--border);
+    border-top-left-radius: var(--border);
+    position: relative;
+    top: -10%;
+    padding-top: 10px;
+    text-align: center;
+    z-index: 1;
+} 
+
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--colored-dark);
+}
+
+.form-wrapper {
+    grid-area: form;
+    background: white;
+    box-shadow: 0 0 10px hsl(120, 12%, 80%);
+    display: grid;
+    align-items: center;
+    z-index: 10;
+    position: relative;
+    top: 6%;
+    border-top-right-radius: var(--border);
+    padding: 0 11vw;
+    border-top-left-radius: var(--border);
+}
+
+.input {
+    height: var(--input-height);
+    border-radius: 5px;
+    border: 2px solid var(--unfocused);
+}
+
+.input {
+    margin-bottom: 10px;
+}
+
+.input:focus-within {
+    border-color: var(--accent);
+}
+
+.input:focus-within legend {
+    color: var(--accent);
+}
+
+.input:focus-within input {
+    color: var(--colored-dark);
+}
+
+.input.contains-legend {
+    height: calc(var(--input-height) + var(--input-offset));
+}
+
+.input input, legend {
+    color: var(--unfocused);
+}
+
+.input input {
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    font-size: 1rem;
+    padding: 0 10px;
+}
+
+legend {
+    margin-left: 10px;
+}
+
+
+.input.contains-legend input {
+    height: calc(100% + var(--input-offset));
+    transform: translateY(calc(var(--input-offset) * -1));
+}
+
+.checkbox, .checkbox fieldset {
+    border: none;
+}
+
+.checkbox input {
+    margin-right: 5px;
+    margin-left: 12px;
+}
+
+.submit {
+    width: 100%;
+    height: var(--input-height);
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background: hsl(160, 0%, 34%);
+    margin-top: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    font-family: 'Manrope', sans-serif;
+    cursor: pointer;
+}
+
+.link, .checkbox {
+    /* color: var(--colored-dark) */
+    color: #ABABAB;
+}
+
+.link a {
+    color: var(--accent)
+}
