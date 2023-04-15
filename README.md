@@ -7,13 +7,12 @@ The file structure goes as follows:
         - [project-files]
 
 To get started with a project:
-
-    - Open the [technology-im-trying] folder
-    - Run the docker file to start the server on port 3000
-    - If docker isn't available then:
-        - Install node version >= 18.16.0
-        - Run `npm install` to download the necessary packages
-        - Run `npm start` to start the necessary services
+- Open the [technology-im-trying] folder
+- Run the docker file to start the server on port 3000
+- If docker isn't available then:
+    - Install node version >= 18.16.0
+    - Run `npm install` to download the necessary packages
+    - Run `npm start` to start the necessary services
 
 ### Table of Contents
 - **01-plain-vanilla**
