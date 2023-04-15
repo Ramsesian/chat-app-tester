@@ -1,9 +1,12 @@
-const http = require("http"),
-      fs = require("fs"),
-      parse = require("url").parse,
-      strDecoder = require("string_decoder").StringDecoder,
-      detectType = require("./mime.js"),
-      toObject = require("./query-to-object.js");
+// node modules
+const http = require("http");
+const fs = require("fs");
+const parse = require("url").parse;
+const strDecoder = require("string_decoder").StringDecoder;
+
+// other javascript files
+const detectType = require("./mime.js");
+const toObject = require("./query-to-object.js");
 
 const indexPage = "html/index.html";
 
