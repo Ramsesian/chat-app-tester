@@ -5,10 +5,10 @@ const parse = require("url").parse;
 const strDecoder = require("string_decoder").StringDecoder;
 
 // other javascript files
-const detectType = require("./mime.js");
-const toObject = require("./query-to-object.js");
+const detectType = require("./utils/mime.js");
+const toObject = require("./utils/query-to-object.js");
 
-const indexPage = "html/index.html";
+const indexPage = "index.html";
 
 // is run whenever an HTTP request is made
 const server = http.createServer((request, resolve) => { 
@@ -79,11 +79,11 @@ const routes = {
         resolve.writeHead(302, {"Location": indexPage});
         resolve.end();
     },
-    serve: serveFile
+    serve // through punning this calls the function serve
 }
 
 // handle the request and send back a static files
-function serveFile(data, resolve) {
+function serve(data, resolve) {
     const path = data.path;
     const file = __dirname + "/public/" + path;
     console.log(`The path "${data.path}" was requested`);
